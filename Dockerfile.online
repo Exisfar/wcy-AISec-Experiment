@@ -1,0 +1,23 @@
+# 重新依据 uv.lock 安装环境；用于联网环境下的独立重建。
+FROM nvidia/cuda:12.5.1-base-ubuntu20.04@sha256:9608fa115ab6f9b5985f8a05019f707148454ed669791572d95dd9814e582149
+WORKDIR /workspace
+COPY runtime/uv /usr/local/bin/uv
+ADD runtime/python.tar.gz /opt/python/
+COPY pyproject.toml uv.lock /workspace/
+RUN uv sync --frozen --python /opt/python/bin/python3.11
+COPY src /workspace/src
+COPY scripts /workspace/scripts
+COPY tests /workspace/tests
+COPY notebooks /workspace/notebooks
+COPY results /workspace/results
+COPY docs /workspace/docs
+COPY slides /workspace/slides
+COPY vendor/dataset_bias_metrics /workspace/vendor/dataset_bias_metrics
+COPY vendor/UPSTREAM.json /workspace/vendor/UPSTREAM.json
+COPY README.md LICENSE /workspace/
+COPY ["2024_Metrics for Dataset Demographic Bias - A Case Study on Facial Expression Recognition.pdf", "/workspace/"]
+ENV PATH="/workspace/.venv/bin:/usr/local/bin:/usr/bin:/bin" MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONUNBUFFERED=1 NVIDIA_VISIBLE_DEVICES=void
+RUN chmod +x scripts/entrypoint.sh && python scripts/verify_artifacts.py && python -m pytest -q tests
+EXPOSE 8888
+ENTRYPOINT ["/workspace/scripts/entrypoint.sh"]
+CMD ["help"]

@@ -1,0 +1,6 @@
+.venv
+.git
+dist
+vendor/*/.git
+__pycache__
+.pytest_cache

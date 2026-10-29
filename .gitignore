@@ -1,0 +1,47 @@
+# Python 虚拟环境与本地依赖缓存
+.venv/
+venv/
+.uv-cache/
+.tox/
+.nox/
+
+# Python / Jupyter / 检查工具生成的缓存
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# 项目级大型交付包、离线运行环境和教师重跑输出
+/dist/
+/runtime/
+/teacher-output/
+/build/
+
+# 可重新生成的论文文本与演示预览图
+/paper.txt
+/paper_raw.txt
+/slides/contact_sheet_*.png
+/slides/preview_*.png
+
+# 本地环境变量；保留可分享的配置示例
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# 日志、编辑器临时文件和操作系统杂项
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# 刻意保留：源码、Notebook、数据 CSV、results/、PPT/PDF、文档、
+# Dockerfile、pyproject.toml、uv.lock，以及可共享的编辑器配置。

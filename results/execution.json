@@ -1,0 +1,20 @@
+{
+  "notebooks": [
+    {
+      "notebook": "00_论文核对与公式审计.ipynb",
+      "seconds": 1.82,
+      "status": "passed"
+    },
+    {
+      "notebook": "01_二十个真实数据集完整指标复现.ipynb",
+      "seconds": 27.69,
+      "status": "passed"
+    },
+    {
+      "notebook": "02_不足分析与改进探索.ipynb",
+      "seconds": 2.63,
+      "status": "passed"
+    }
+  ],
+  "total_seconds": 32.14
+}

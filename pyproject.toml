@@ -1,0 +1,14 @@
+[project]
+name = "fer-bias-reproduction"
+version = "1.0.0"
+description = "Reproducible audit of arXiv:2303.15889v2 with 20 public demographic datasets"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+ "numpy==1.26.4", "pandas==2.1.4", "scipy==1.12.0", "matplotlib==3.8.4",
+ "seaborn==0.13.2", "scikit-learn==1.4.2", "jupyterlab==4.2.5",
+ "nbclient==0.10.0", "nbconvert==7.16.4", "nbformat==5.10.4",
+ "python-pptx==1.0.2", "pymupdf==1.24.14", "pillow==10.4.0",
+ "pytest==8.3.3", "mistune==3.0.2", "ipykernel==6.29.5", "ipython==8.29.0", "jupyter-client==8.6.3"
+]
+[tool.uv]
+package = false

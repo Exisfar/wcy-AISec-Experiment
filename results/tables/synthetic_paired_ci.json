@@ -1,0 +1,6 @@
+{
+  "n_seeds": 20,
+  "mean_accuracy_improvement": 0.59619375,
+  "ci_low": 0.5837217409474144,
+  "ci_high": 0.6086657590525856
+}
