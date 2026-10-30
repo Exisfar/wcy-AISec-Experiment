@@ -1,0 +1,8 @@
+{
+  "verified_real_mitigation_models": 3,
+  "expected": 3,
+  "complete": true,
+  "same_subsets_initializations_and_test_sets": true,
+  "cap_predeclared": 5,
+  "test_used_for_cap_selection": false
+}

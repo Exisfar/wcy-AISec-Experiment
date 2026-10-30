@@ -1,6 +1,23 @@
 .venv
 .git
 dist
-vendor/*/.git
-__pycache__
-.pytest_cache
+**/__pycache__
+**/.pytest_cache
+checkpoints
+presentation
+data/*
+!data/demographics
+!data/models
+!data/kaggle-affectnet-yolo
+data/kaggle-affectnet-yolo/*
+!data/kaggle-affectnet-yolo/extracted
+results/figures/slide_*
+results/figures/appendixA_real_macro_slide.png
+scripts/make_slides.py
+scripts/export_speech.py
+scripts/speech_content.json
+scripts/check_slides.py
+scripts/presentation_local.sh
+
+# 本机封面参考图不进入实验镜像。
+image.png

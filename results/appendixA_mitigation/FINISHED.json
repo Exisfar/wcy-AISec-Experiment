@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "real_models": 3,
+  "paired_baselines": 3,
+  "cap": 5.0,
+  "test_used_for_cap_selection": false
+}

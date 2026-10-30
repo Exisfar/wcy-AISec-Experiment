@@ -13,6 +13,7 @@ def entropy(p):
 
 
 def representation(counts):
+    """counts为各组样本数；只对非零组计算指标，单组SEI与NSD返回NaN。"""
     counts = np.asarray(counts, dtype=float)
     p = counts[counts > 0] / counts.sum()
     r, h = len(p), entropy(p)
@@ -24,6 +25,7 @@ def representation(counts):
 
 
 def association(table):
+    """table的行为人口组、列为标签；返回全局指标字典及同形的NPMI、Z矩阵。"""
     t = np.asarray(table, dtype=float)
     t = t[t.sum(axis=1) > 0][:, t.sum(axis=0) > 0]
     p = t / t.sum()
@@ -53,6 +55,7 @@ def association(table):
 
 
 def fixed_universe(counts, k):
+    """在预设K个组上补充覆盖指标，区分缺组与已出现组内部的均匀程度。"""
     """补充观测 richness：固定预设组数 K 的覆盖率与熵归一化。"""
     m = representation(counts)
     return {'coverage': m['R']/k, 'H_over_logK': m['H']/np.log(k),
@@ -60,6 +63,7 @@ def fixed_universe(counts, k):
 
 
 def corrected_v(t):
+    """计算有限样本修正的Cramér V，用于03中的不确定性探索。"""
     """Bergsma 型有限样本校正，仅用于总体推断扩展，不覆盖论文描述量。"""
     t = np.asarray(t, float)
     t = t[t.sum(1)>0][:, t.sum(0)>0]

@@ -1,0 +1,14 @@
+{
+  "inside_docker": true,
+  "hostname": "localhost.localdomain",
+  "python_executable": "/workspace/gpu/.venv/bin/python",
+  "python": "3.12.13",
+  "torch": "2.6.0+cu124",
+  "torchvision": "0.21.0+cu124",
+  "numpy": "1.26.4",
+  "pandas": "2.1.4",
+  "cuda_runtime": "12.4",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 3090 Ti",
+  "http_proxy_configured": true
+}

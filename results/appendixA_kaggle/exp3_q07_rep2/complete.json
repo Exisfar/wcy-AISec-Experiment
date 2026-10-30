@@ -1,0 +1,22 @@
+{
+  "run": "exp3_q07_rep2",
+  "config_hash": "0a905c45cf4ed055dcf7075c3b531b5861a02775f6bc80c8dabcb592e32f3448",
+  "epochs": 20,
+  "experiment": 3,
+  "step": 7,
+  "fraction": 0.7,
+  "repetition": 2,
+  "smoke_test_only": false,
+  "training_rows": 6275,
+  "test_rows": 2421,
+  "seconds": 130.1023059229774,
+  "test_accuracy": 0.6670797191243288,
+  "manifest_sha256": "868a06bb475555ce3990e074b1973f3809d5cf1d0f022a11654a7d24e2ae03d4",
+  "pretrained_sha256": "0676ba61b6795bbe1773cffd859882e5e297624d384b6993f7c9e683e722fb8a",
+  "artifact_sha256": {
+    "recall.csv": "750e44fcb762ad845147dd2210327d1e26d853e382dd5f310248e62841c96c84",
+    "confusion.npz": "7d21097ae17dc4dba11f01f4c8134119f555c5cc4473314bda32b370f0947384",
+    "history.csv": "08d1bb6849b1b4fb1c53a17660dd980aba774a73d7ddf3aa9c8249e4e8cd4ac9",
+    "train_counts.csv": "4de6fd01c3ad343a65e172b0cdf4ff6a2ce3d5760cb92441e4697ce60b33ef95"
+  }
+}

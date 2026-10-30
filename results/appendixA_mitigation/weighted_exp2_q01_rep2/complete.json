@@ -1,0 +1,17 @@
+{
+  "run": "weighted_exp2_q01_rep2",
+  "config_hash": "99c2c4fda094ffc180f4d76a6dfa2c4c78e83dcd0d29b38a302dc5dcfdf83df9",
+  "repetition": 2,
+  "epochs": 20,
+  "test_accuracy": 0.6633622470053697,
+  "baseline_accuracy": 0.6687319289549772,
+  "ESS_fraction": 0.798422605558415,
+  "max_weight": 5.002807411566535,
+  "test_rows": 2421,
+  "original_paper_data_match": false,
+  "artifact_sha256": {
+    "history.csv": "4cb7f1b3045219f4db96ca441acfbbea6e6dff5d51d0e53c730035b929a7c53f",
+    "recall.csv": "43a26adaa2891de0be0234ef592117368ef10aee89413a8760bf16065c718073",
+    "confusion.npz": "d4283825bbf6cb7f9fdd3b7bcb46f6405d9c3a0bc6bd11568698d4453dd5b1d7"
+  }
+}

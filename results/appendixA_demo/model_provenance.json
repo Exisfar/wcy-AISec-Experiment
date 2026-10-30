@@ -1,0 +1,29 @@
+{
+  "source_run": "exp1_q05_rep0",
+  "source_config_hash": "70dc9f38cd5f288c81006636b655fbfa23a1a732ed16b32621c7a1e8554ec226",
+  "trained_on_real_images": true,
+  "original_paper_data_match": false,
+  "model_sha256": "2de4daa350e41420afaf11fc6d53c7f87d874a57f2f05a455509fcf1a89626f0",
+  "test_manifest_sha256": "49ae1dde4547e8c7d00a71bc4646efcef3ba345818740e1b5582eb91ac721287",
+  "expected_confusion_sha256": "4951792310236fbc1ef24f00ca6ae9f9591df494b53d94fa15efa3bd24b278e4",
+  "test_rows": 2421,
+  "expected_accuracy": 0.6612969847170591,
+  "classes": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "image_size": 224,
+  "source_dataset": "fatihkgg/affectnet-yolo-format",
+  "source_version": 2,
+  "source_zip_sha256": "883521d22d3f80b8b3da3b221dfbf2f173f186fd9dc380c028cad1f5cbae2c66",
+  "dataset_download_url": "https://www.kaggle.com/api/v1/datasets/download/fatihkgg/affectnet-yolo-format?datasetVersionNumber=2",
+  "images_included": true,
+  "note": "The exported model is trained on the explicitly modified Kaggle subset, not the original paper AffectNet.",
+  "model_path": "data/models/resnet50_balanced_kaggle.pth",
+  "image_root": "data/kaggle-affectnet-yolo/extracted"
+}

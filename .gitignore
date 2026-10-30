@@ -26,8 +26,9 @@ htmlcov/
 # 可重新生成的论文文本与演示预览图
 /paper.txt
 /paper_raw.txt
-/slides/contact_sheet_*.png
-/slides/preview_*.png
+/presentation/contact_sheet_*.png
+/presentation/preview_*.png
+/presentation/.fonts/
 
 # 本地环境变量；保留可分享的配置示例
 .env
@@ -45,3 +46,13 @@ Thumbs.db
 
 # 刻意保留：源码、Notebook、数据 CSV、results/、PPT/PDF、文档、
 # Dockerfile、pyproject.toml、uv.lock，以及可共享的编辑器配置。
+
+# 附录 A：原始图片、预训练权重和训练检查点（统计汇总仍保留）
+/data/*
+!/data/demographics/
+/checkpoints/
+/results/appendixA/**/predictions.npz
+/results/appendixA/**/train_selection.csv
+/results/**/.training.lock
+
+/presentation/.formulas/

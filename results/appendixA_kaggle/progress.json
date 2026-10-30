@@ -1,0 +1,11 @@
+{
+  "completed_runs": 132,
+  "expected_runs": 132,
+  "active": [],
+  "mean_run_seconds": 130.84638865435392,
+  "estimated_remaining_hours": 0.0,
+  "formal_grid_complete": true,
+  "scope": "modified Kaggle real-image experiment; not original AffectNet replication",
+  "training_status": "complete",
+  "training_lock_held": false
+}

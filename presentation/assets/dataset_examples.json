@@ -1,0 +1,18 @@
+[
+  {
+    "asset": "presentation/assets/ffhq_103.png",
+    "source": "data/kaggle-affectnet-yolo/extracted/YOLO_format/test/images/ffhq_103.png",
+    "label": "happy",
+    "split": "test",
+    "sha256": "b48827ac8bb0445d3838da79c40f22236a1e130434340d8226211ef53cdadac2",
+    "modified": false
+  },
+  {
+    "asset": "presentation/assets/ffhq_1196.png",
+    "source": "data/kaggle-affectnet-yolo/extracted/YOLO_format/test/images/ffhq_1196.png",
+    "label": "angry",
+    "split": "test",
+    "sha256": "5e6a04a493db416799d808a75167abe867c67a3266bc01c40fe201df5ac15308",
+    "modified": false
+  }
+]

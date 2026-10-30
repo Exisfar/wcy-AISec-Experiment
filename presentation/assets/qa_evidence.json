@@ -1,0 +1,653 @@
+{
+  "scope": "Post-hoc reading of existing saved experiment outputs; no retraining; original paper curves are not available as numeric arrays.",
+  "train_size_ranges": {
+    "1": {
+      "min": 6273,
+      "max": 6280
+    },
+    "2": {
+      "min": 6275,
+      "max": 6276
+    },
+    "3": {
+      "min": 6275,
+      "max": 6277
+    },
+    "4": {
+      "min": 6275,
+      "max": 6277
+    }
+  },
+  "test_support": {
+    "Female": {
+      "angry": 94,
+      "disgust": 153,
+      "fear": 151,
+      "happy": 236,
+      "neutral": 122,
+      "sad": 120,
+      "surprise": 195
+    },
+    "Male": {
+      "angry": 288,
+      "disgust": 174,
+      "fear": 166,
+      "happy": 163,
+      "neutral": 128,
+      "sad": 158,
+      "surprise": 273
+    }
+  },
+  "female_happy_seed_intervals": [
+    {
+      "q": 0.5,
+      "rep": 0,
+      "tp": 206,
+      "support": 236,
+      "recall": 0.8728813559322034,
+      "wilson95_iid_images": [
+        0.8243312443270338,
+        0.9094868406087234
+      ]
+    },
+    {
+      "q": 0.5,
+      "rep": 1,
+      "tp": 205,
+      "support": 236,
+      "recall": 0.8686440677966102,
+      "wilson95_iid_images": [
+        0.8195842266744001,
+        0.905895016387087
+      ]
+    },
+    {
+      "q": 0.5,
+      "rep": 2,
+      "tp": 214,
+      "support": 236,
+      "recall": 0.9067796610169492,
+      "wilson95_iid_images": [
+        0.8628967556241073,
+        0.9376320643058095
+      ]
+    },
+    {
+      "q": 0.0,
+      "rep": 0,
+      "tp": 191,
+      "support": 236,
+      "recall": 0.809322033898305,
+      "wilson95_iid_images": [
+        0.7544054025846173,
+        0.8543300542370901
+      ]
+    },
+    {
+      "q": 0.0,
+      "rep": 1,
+      "tp": 179,
+      "support": 236,
+      "recall": 0.7584745762711864,
+      "wilson95_iid_images": [
+        0.7000093165458425,
+        0.8086600377846254
+      ]
+    },
+    {
+      "q": 0.0,
+      "rep": 2,
+      "tp": 187,
+      "support": 236,
+      "recall": 0.7923728813559322,
+      "wilson95_iid_images": [
+        0.7361443444390886,
+        0.8392357448855391
+      ]
+    }
+  ],
+  "endpoint_comparisons": {
+    "exp2_Female_happy": {
+      "balanced": {
+        "mean": 0.882768361581921,
+        "std": 0.0209020460267637
+      },
+      "missing": {
+        "mean": 0.786723163841808,
+        "std": 0.0258902581635922
+      }
+    },
+    "exp3_Female_angry": {
+      "balanced": {
+        "mean": 0.4858156028368794,
+        "std": 0.0162502684218292
+      },
+      "missing": {
+        "mean": 0.1631205673758865,
+        "std": 0.0162502684218292
+      }
+    }
+  },
+  "exp2_female_class_changes": {
+    "angry": {
+      "q05": {
+        "mean": 0.5106382978723404,
+        "std": 0.0531914893617021
+      },
+      "q00": {
+        "mean": 0.5212765957446809,
+        "std": 0.0184260724209455
+      }
+    },
+    "disgust": {
+      "q05": {
+        "mean": 0.6405228758169934,
+        "std": 0.0345849844583606
+      },
+      "q00": {
+        "mean": 0.6514161220043573,
+        "std": 0.0425255365924687
+      }
+    },
+    "fear": {
+      "q05": {
+        "mean": 0.6997792494481235,
+        "std": 0.036473977134345
+      },
+      "q00": {
+        "mean": 0.6534216335540839,
+        "std": 0.0465150276064138
+      }
+    },
+    "happy": {
+      "q05": {
+        "mean": 0.882768361581921,
+        "std": 0.0209020460267637
+      },
+      "q00": {
+        "mean": 0.786723163841808,
+        "std": 0.0258902581635922
+      }
+    },
+    "neutral": {
+      "q05": {
+        "mean": 0.685792349726776,
+        "std": 0.0047323792556526
+      },
+      "q00": {
+        "mean": 0.721311475409836,
+        "std": 0.0357286798650874
+      }
+    },
+    "sad": {
+      "q05": {
+        "mean": 0.5638888888888889,
+        "std": 0.0336787657027281
+      },
+      "q00": {
+        "mean": 0.5472222222222222,
+        "std": 0.0458964212273841
+      }
+    },
+    "surprise": {
+      "q05": {
+        "mean": 0.7076923076923077,
+        "std": 0.0447066558311863
+      },
+      "q00": {
+        "mean": 0.7709401709401709,
+        "std": 0.0236861648898307
+      }
+    },
+    "mean": {
+      "q05": {
+        "mean": 0.6701546187181929,
+        "std": 0.0263751704713033
+      },
+      "q00": {
+        "mean": 0.6646159119595941,
+        "std": 0.0077918420269553
+      }
+    }
+  },
+  "exp2_female_happy_error_flow": {
+    "q05": {
+      "predicted_class_mean_counts": {
+        "angry": 1.6666666666666667,
+        "disgust": 8.0,
+        "fear": 0.0,
+        "happy": 208.33333333333334,
+        "neutral": 7.333333333333333,
+        "sad": 5.666666666666667,
+        "surprise": 5.0
+      },
+      "predicted_class_seed_counts": {
+        "angry": [
+          2,
+          0,
+          3
+        ],
+        "disgust": [
+          10,
+          9,
+          5
+        ],
+        "fear": [
+          0,
+          0,
+          0
+        ],
+        "happy": [
+          206,
+          205,
+          214
+        ],
+        "neutral": [
+          7,
+          8,
+          7
+        ],
+        "sad": [
+          6,
+          8,
+          3
+        ],
+        "surprise": [
+          5,
+          6,
+          4
+        ]
+      }
+    },
+    "q00": {
+      "predicted_class_mean_counts": {
+        "angry": 1.6666666666666667,
+        "disgust": 22.666666666666668,
+        "fear": 0.3333333333333333,
+        "happy": 185.66666666666666,
+        "neutral": 12.666666666666666,
+        "sad": 4.0,
+        "surprise": 9.0
+      },
+      "predicted_class_seed_counts": {
+        "angry": [
+          3,
+          0,
+          2
+        ],
+        "disgust": [
+          19,
+          28,
+          21
+        ],
+        "fear": [
+          0,
+          1,
+          0
+        ],
+        "happy": [
+          191,
+          179,
+          187
+        ],
+        "neutral": [
+          13,
+          16,
+          9
+        ],
+        "sad": [
+          4,
+          3,
+          5
+        ],
+        "surprise": [
+          6,
+          9,
+          12
+        ]
+      }
+    }
+  },
+  "exp2_middle_happy_curves": {
+    "Female": [
+      {
+        "q": 0.1,
+        "mean": 0.8206214689265536,
+        "std": 0.0244639944571874
+      },
+      {
+        "q": 0.2,
+        "mean": 0.8785310734463277,
+        "std": 0.0176412372836113
+      },
+      {
+        "q": 0.3,
+        "mean": 0.8728813559322034,
+        "std": 0.0042372881355932
+      },
+      {
+        "q": 0.4,
+        "mean": 0.8742937853107344,
+        "std": 0.0217440738959613
+      },
+      {
+        "q": 0.5,
+        "mean": 0.882768361581921,
+        "std": 0.0209020460267637
+      },
+      {
+        "q": 0.6,
+        "mean": 0.8997175141242938,
+        "std": 0.0064725645408981
+      },
+      {
+        "q": 0.7,
+        "mean": 0.9096045197740112,
+        "std": 0.0024463994457187
+      },
+      {
+        "q": 0.8,
+        "mean": 0.903954802259887,
+        "std": 0.019106990478063
+      },
+      {
+        "q": 0.9,
+        "mean": 0.8997175141242938,
+        "std": 0.0176412372836112
+      }
+    ],
+    "Male": [
+      {
+        "q": 0.1,
+        "mean": 0.8854805725971371,
+        "std": 0.0070840523826947
+      },
+      {
+        "q": 0.2,
+        "mean": 0.901840490797546,
+        "std": 0.0061349693251533
+      },
+      {
+        "q": 0.3,
+        "mean": 0.8854805725971371,
+        "std": 0.0070840523826947
+      },
+      {
+        "q": 0.4,
+        "mean": 0.8773006134969324,
+        "std": 0.0324632062707312
+      },
+      {
+        "q": 0.5,
+        "mean": 0.8588957055214723,
+        "std": 0.0106260785740421
+      },
+      {
+        "q": 0.6,
+        "mean": 0.8507157464212679,
+        "std": 0.0283362095307791
+      },
+      {
+        "q": 0.7,
+        "mean": 0.8445807770961146,
+        "std": 0.0093713204395824
+      },
+      {
+        "q": 0.8,
+        "mean": 0.8016359918200409,
+        "std": 0.0154393342234575
+      },
+      {
+        "q": 0.9,
+        "mean": 0.7566462167689162,
+        "std": 0.0127709570519394
+      }
+    ]
+  },
+  "posthoc_V_gap_correlations": [
+    {
+      "experiment": 1,
+      "rho": null,
+      "n_q": 9,
+      "V_range": [
+        0.0,
+        0.0010307003588875
+      ],
+      "definition": "abs(Female macro recall mean - Male macro recall mean)",
+      "note": "V is essentially zero for pure representational bias; exclude endpoint NaNs; correlation is not interpreted."
+    },
+    {
+      "experiment": 2,
+      "rho": -0.10575411267049169,
+      "n_q": 11,
+      "V_range": [
+        0.0,
+        0.3527633261631859
+      ],
+      "definition": "abs(Female macro recall mean - Male macro recall mean)",
+      "note": "11 q values; V rounded to 12 decimals for ties; no significance or causality claim."
+    },
+    {
+      "experiment": 3,
+      "rho": -0.04598004898717029,
+      "n_q": 11,
+      "V_range": [
+        0.0,
+        0.4778072628019205
+      ],
+      "definition": "abs(Female macro recall mean - Male macro recall mean)",
+      "note": "11 q values; V rounded to 12 decimals for ties; no significance or causality claim."
+    },
+    {
+      "experiment": 4,
+      "rho": 0.4873885192640051,
+      "n_q": 11,
+      "V_range": [
+        0.0,
+        0.4328257926152019
+      ],
+      "definition": "abs(Female macro recall mean - Male macro recall mean)",
+      "note": "11 q values; V rounded to 12 decimals for ties; no significance or causality claim."
+    }
+  ],
+  "posthoc_weighting_happy_errors": [
+    {
+      "gender": "Female",
+      "method": "ERM",
+      "per_seed": [
+        {
+          "rep": 0,
+          "tp": 187,
+          "positive": 236,
+          "fp": 13,
+          "negative": 835,
+          "FPR": 0.015568862275449102,
+          "precision": 0.935,
+          "recall": 0.7923728813559322
+        },
+        {
+          "rep": 1,
+          "tp": 197,
+          "positive": 236,
+          "fp": 13,
+          "negative": 835,
+          "FPR": 0.015568862275449102,
+          "precision": 0.9380952380952381,
+          "recall": 0.8347457627118644
+        },
+        {
+          "rep": 2,
+          "tp": 197,
+          "positive": 236,
+          "fp": 13,
+          "negative": 835,
+          "FPR": 0.015568862275449102,
+          "precision": 0.9380952380952381,
+          "recall": 0.8347457627118644
+        }
+      ],
+      "mean_FPR": 0.015568862275449102,
+      "mean_precision": 0.937063492063492,
+      "mean_recall": 0.8206214689265536
+    },
+    {
+      "gender": "Female",
+      "method": "Reweighted",
+      "per_seed": [
+        {
+          "rep": 0,
+          "tp": 194,
+          "positive": 236,
+          "fp": 15,
+          "negative": 835,
+          "FPR": 0.017964071856287425,
+          "precision": 0.9282296650717703,
+          "recall": 0.8220338983050848
+        },
+        {
+          "rep": 1,
+          "tp": 194,
+          "positive": 236,
+          "fp": 21,
+          "negative": 835,
+          "FPR": 0.025149700598802394,
+          "precision": 0.9023255813953488,
+          "recall": 0.8220338983050848
+        },
+        {
+          "rep": 2,
+          "tp": 200,
+          "positive": 236,
+          "fp": 18,
+          "negative": 835,
+          "FPR": 0.02155688622754491,
+          "precision": 0.9174311926605505,
+          "recall": 0.847457627118644
+        }
+      ],
+      "mean_FPR": 0.02155688622754491,
+      "mean_precision": 0.9159954797092231,
+      "mean_recall": 0.8305084745762712
+    },
+    {
+      "gender": "Male",
+      "method": "ERM",
+      "per_seed": [
+        {
+          "rep": 0,
+          "tp": 145,
+          "positive": 163,
+          "fp": 38,
+          "negative": 1187,
+          "FPR": 0.03201347935973041,
+          "precision": 0.7923497267759563,
+          "recall": 0.8895705521472392
+        },
+        {
+          "rep": 1,
+          "tp": 145,
+          "positive": 163,
+          "fp": 52,
+          "negative": 1187,
+          "FPR": 0.04380791912384162,
+          "precision": 0.7360406091370558,
+          "recall": 0.8895705521472392
+        },
+        {
+          "rep": 2,
+          "tp": 143,
+          "positive": 163,
+          "fp": 40,
+          "negative": 1187,
+          "FPR": 0.03369839932603201,
+          "precision": 0.7814207650273224,
+          "recall": 0.8773006134969326
+        }
+      ],
+      "mean_FPR": 0.03650659926986801,
+      "mean_precision": 0.769937033646778,
+      "mean_recall": 0.8854805725971371
+    },
+    {
+      "gender": "Male",
+      "method": "Reweighted",
+      "per_seed": [
+        {
+          "rep": 0,
+          "tp": 141,
+          "positive": 163,
+          "fp": 33,
+          "negative": 1187,
+          "FPR": 0.02780117944397641,
+          "precision": 0.8103448275862069,
+          "recall": 0.8650306748466258
+        },
+        {
+          "rep": 1,
+          "tp": 139,
+          "positive": 163,
+          "fp": 47,
+          "negative": 1187,
+          "FPR": 0.039595619208087615,
+          "precision": 0.7473118279569892,
+          "recall": 0.852760736196319
+        },
+        {
+          "rep": 2,
+          "tp": 142,
+          "positive": 163,
+          "fp": 44,
+          "negative": 1187,
+          "FPR": 0.03706823925863521,
+          "precision": 0.7634408602150538,
+          "recall": 0.8711656441717791
+        }
+      ],
+      "mean_FPR": 0.03482167930356641,
+      "mean_precision": 0.7736991719194166,
+      "mean_recall": 0.8629856850715746
+    }
+  ],
+  "zero_joint_Z": [
+    [
+      1.0,
+      -1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "one_group_Z": [
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "one_group_IR": 1.0,
+  "one_percent_toy": {
+    "counts": [
+      [
+        1
+      ],
+      [
+        99
+      ]
+    ],
+    "weights_after_class_normalization": [
+      [
+        9.09090909090909
+      ],
+      [
+        0.9182736455463728
+      ]
+    ],
+    "effective_mass_fraction_minority": 0.0909090909090909,
+    "ESS_fraction": 0.601959798994975,
+    "scope": "algebraic toy only; not a trained 1% experiment"
+  },
+  "class_prior": {
+    "target_train_total": 6280,
+    "happy_fraction": 0.14203821656050955
+  }
+}

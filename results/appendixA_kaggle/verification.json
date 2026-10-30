@@ -1,0 +1,9 @@
+{
+  "verified_runs": 132,
+  "expected_runs": 132,
+  "complete": true,
+  "epochs_per_run": 20,
+  "recall_entries_recomputed": 2112,
+  "scope": "Kaggle modified-data real-image experiment, not original paper AffectNet",
+  "all_hashes_counts_histories_and_recalls_match": true
+}
