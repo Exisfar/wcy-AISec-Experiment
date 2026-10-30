@@ -1,0 +1,10 @@
+{
+  "device": "cuda",
+  "real_test_images": 2421,
+  "accuracy": 0.6612969847170591,
+  "saved_training_run_accuracy": 0.6612969847170591,
+  "confusion_matches_saved": true,
+  "max_confusion_cell_change": 0,
+  "original_paper_data_match": false,
+  "note": "GPU AMP matches the training evaluation mode. CPU FP32 may change near-tied predictions; differences are reported, not hidden."
+}

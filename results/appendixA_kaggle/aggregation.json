@@ -1,0 +1,6 @@
+{
+  "completed_runs": 132,
+  "expected_runs": 132,
+  "complete": true,
+  "error_bands": "sample standard deviation across repetitions; not confidence intervals"
+}

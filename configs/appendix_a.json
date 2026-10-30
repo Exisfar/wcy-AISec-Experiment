@@ -1,0 +1,33 @@
+{
+  "paper": "arXiv:2303.15889v2 Appendix A",
+  "image_root": "/workspace/data/affectnet",
+  "manifest": "/workspace/data/affectnet/manifest.csv",
+  "output_dir": "/workspace/results/appendixA",
+  "checkpoint_dir": "/workspace/checkpoints/appendixA",
+  "pretrained_path": "/workspace/data/models/resnet50-0676ba61.pth",
+  "pretrained_sha256": null,
+  "epochs": 20,
+  "max_lr": 0.0001,
+  "repetitions": 3,
+  "fractions": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "experiments": [1, 2, 3, 4],
+  "class_totals": {"angry": 6962, "disgust": 1733, "fear": 3117, "happy": 54241, "neutral": 33708, "sad": 11175, "surprise": 6439},
+  "batch_size": 256,
+  "workers": 8,
+  "image_size": 224,
+  "seed": 20241028,
+  "amp": true,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "horizontal_flip": true,
+  "onecycle_pct_start": 0.3,
+  "onecycle_div_factor": 25.0,
+  "onecycle_final_div_factor": 10000.0,
+  "protocol_assumptions": [
+    "Paper specifies pretrained ResNet50, 20 epochs, 1cycle, max_lr=1e-4, 3 repetitions, entire AffectNet test partition.",
+    "The metric package does not contain the Appendix A training implementation. Optimizer, batch size, classification head, augmentation, normalization and scheduler details below are declared reimplementation choices, not claimed paper facts.",
+    "torchvision ImageNet1K V1 initialization, 7-way linear head, full backbone training; AdamW; ImageNet normalization; resize to 224; optional horizontal flip; final epoch evaluation only.",
+    "AffectNet official validation partition is used as the held-out test partition, not for tuning or selecting checkpoints. This mapping must be checked against original author artifacts if available.",
+    "FairFace gender predictions must remain linked to their own images. The scrambled anonymous author CSV must never be row-wise joined to images."
+  ]
+}

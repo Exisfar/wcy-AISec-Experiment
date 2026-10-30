@@ -11,21 +11,21 @@ import seaborn as sns
 from metrics import representation, association, corrected_v, fixed_universe
 
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'vendor/dataset_bias_metrics'))
 import dataset_bias_metrics as dbm
 COMPONENTS=['age','race','gender']
 UNIVERSE={'age':9,'race':7,'gender':2}
 LAB={'jaffe','kdef','ck','ck+','oulu-casia','gemep','mug','wsefep','adfes','liris-cse','isafe'}
 MOTION={'sfew','caer-s'}
 GLOBAL_MAP={'ϕ_C':'V','T':'T','C':'C','U→':'Ux','U←':'Uy','NMI':'NMI'}
-for p in ['results/tables','results/figures','results/local']:
+for p in ['results/tables','results/figures']:
     (ROOT/p).mkdir(parents=True,exist_ok=True)
 plt.rcParams.update({'font.family':'DejaVu Sans','figure.dpi':130,'axes.spines.top':False,'axes.spines.right':False})
 sns.set_palette(['#137C8B','#E88C30','#4467B0','#B94C64','#749D5C'])
 
 
 def load_data():
-    data={p.stem:pd.read_csv(p) for p in sorted((ROOT/'vendor/dataset_bias_metrics/example_data').glob('*.csv'))}
+    """读取作者20份匿名CSV，检查列名和缺失值。"""
+    data={p.stem:pd.read_csv(p) for p in sorted((ROOT/'data/demographics').glob('*.csv'))}
     assert len(data)==20
     for name, df in data.items():
         assert list(df)==['age','race','gender','label'] and not df.isna().any().any(), name
@@ -45,6 +45,7 @@ def heatmap(df,name,title,center=None,fmt='.2f',size=(11,6)):
 
 
 def main_metrics(data):
+    """返回表征指标、全局关联、局部排序与作者对照表；每一行保留数据集和组件标识。"""
     reps=[]; globals_=[]; local=[]; checks=[]; inventory=[]
     with warnings.catch_warnings():
         warnings.simplefilter('ignore',FutureWarning)
@@ -71,8 +72,6 @@ def main_metrics(data):
                     checks.append({'dataset':name,'component':c,'metric':key,'ours':float(np.nanmean(arr)),
                                    'upstream':float(np.nanmean(got)),
                                    'match':bool(np.allclose(got,arr,atol=1e-10,rtol=1e-9,equal_nan=True))})
-                    pd.DataFrame(arr,index=table.index,columns=table.columns).to_csv(ROOT/f'results/local/{name}_{c}_{key}.csv')
-                table.to_csv(ROOT/f'results/local/{name}_{c}_counts.csv')
                 if min(table.shape)>1:
                     rho=spearmanr(npmi.ravel(),z.ravel()).statistic
                 else: rho=np.nan
@@ -89,7 +88,8 @@ def main_metrics(data):
 
 
 def agreement(rep,glob):
-    # 与论文 Fig.3 一致：先各组件计算 Spearman，再逐单元平均。NaN 成对删除；复现论文图时将不可定义的组件相关记为 0 后平均，另在文档解释。
+    """分别计算各组件跨数据集的Spearman相关，再逐单元平均。"""
+    # 与论文 Fig.3 一致：先各组件计算 Spearman，再逐单元平均。NaN成对删除，不可定义的组件相关记为0参与图中平均；约定见01。
     r=rep.copy()
     r['1-NSD']=1-r.NSD; r['1/IR']=1/r.IR; r['1-BP']=1-r.BP
     rcols=['R','1/IR','1-NSD','SEI','ENS','H','1-BP','1/D','1-D']
@@ -113,7 +113,8 @@ def agreement(rep,glob):
 
 
 def local_plots(data):
-    # 所有 20 数据集均导出三组件的 counts/NPMI/Z，对应附录 B。
+    """绘制各数据集的局部计数与关联矩阵，检查具体群体和表情的组合。"""
+    # 按数据集绘制三种人口属性的计数、NPMI和Z热图，对应附录B。
     for name,df in data.items():
         fig,axes=plt.subplots(3,3,figsize=(17,12))
         for i,c in enumerate(COMPONENTS):
@@ -144,6 +145,7 @@ def summary_plot(rep,glob):
 
 
 def appendix_curves():
+    """重建四种受控偏差的数据计数与指标，不训练图像模型。"""
     # 表 III–VI 的类计数；与论文一样将不变的非目标类保持为各性别 floor(n_y/2)。
     base=np.array([6962,1733,3117,54241,33708,11175,6439])
     rows=[];tables=[]
@@ -175,6 +177,7 @@ def appendix_curves():
 
 
 def reweighting(data):
+    """检查每个预设单元的支持量；只对有支持的组合计算截断权重和ESS。"""
     """改进探索：目标 q(g,y)=p(y)/K，截断权重后在每个 y 内归一，精确保留 p(y)。
     缺失 g×y 单元无法凭重加权创造样本，直接标记 infeasible，不报告虚假公平。
     """
@@ -212,6 +215,7 @@ def reweighting(data):
 
 
 def uncertainty(data, reps=300):
+    """以列联表重采样估计V的波动，并比较固定边缘零假设和标签扰动。"""
     """对固定列联表 multinomial bootstrap；仅量化 iid 样本假设下的不确定性。"""
     rng=np.random.default_rng(20241028);rows=[]
     for name in ['jaffe','ferplus','expw']:
@@ -254,6 +258,7 @@ def counterexamples():
 
 
 def synthetic_downstream(seeds=20):
+    """在显式生成机制下比较ERM、重加权与删除属性A；结果限于该合成机制。"""
     """本组扩展，绝非 AffectNet 训练复现。
     SCM: U_Y~Bern(.5), X=2U_Y-1+U_X; A 在训练集的选择机制中与 Y 相关。
     干预 do(A) 固定 X、Y 与噪声，只替换敏感属性；此 SCM 下 X 不随 A 改变。
@@ -298,7 +303,7 @@ def synthetic_downstream(seeds=20):
 
 def provenance(data):
     import subprocess,platform
-    files={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'vendor/dataset_bias_metrics/example_data').glob('*.csv'))}
+    files={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'data/demographics').glob('*.csv'))}
     commit='a70bdc28cc96b338f4d5fdebce5064b56d80de57'
     out={'paper':'arXiv:2303.15889v2','paper_title':'Metrics for Dataset Demographic Bias: A Case Study on Facial Expression Recognition',
          'upstream_url':'https://github.com/irisdominguez/Dataset_Bias_Metrics','upstream_commit':commit,

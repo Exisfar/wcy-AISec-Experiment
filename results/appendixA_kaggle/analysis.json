@@ -1,0 +1,497 @@
+{
+  "complete": true,
+  "real_model_runs": 132,
+  "total_epochs": 2640,
+  "test_images_per_run": 2421,
+  "epoch_wall_seconds_sum": 16449.26028797592,
+  "mean_final_train_accuracy": 0.9999867199795153,
+  "mean_test_accuracy": 0.6629867447711313,
+  "macro_recall_range": [
+    0.5947440084481276,
+    0.6950887976757779
+  ],
+  "original_paper_data_match": false,
+  "repetitions": 3,
+  "selected_effects": [
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.9011299435028248,
+      "endpoint_recall": 0.9067796610169492,
+      "endpoint_std": 0.0073391983371562,
+      "drop_from_balanced": -0.005649717514124353
+    },
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.9011299435028248,
+      "endpoint_recall": 0.8926553672316384,
+      "endpoint_std": 0.0024463994457187,
+      "drop_from_balanced": 0.008474576271186418
+    },
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5177304964539007,
+      "endpoint_recall": 0.2943262411347517,
+      "endpoint_std": 0.0341973431240884,
+      "drop_from_balanced": 0.22340425531914898
+    },
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5177304964539007,
+      "endpoint_recall": 0.5496453900709221,
+      "endpoint_std": 0.0341973431240885,
+      "drop_from_balanced": -0.03191489361702138
+    },
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6752004897456709,
+      "endpoint_recall": 0.5947440084481276,
+      "endpoint_std": 0.0200295868036888,
+      "drop_from_balanced": 0.08045648129754335
+    },
+    {
+      "experiment": 1,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6752004897456709,
+      "endpoint_recall": 0.6950887976757779,
+      "endpoint_std": 0.0095696204002672,
+      "drop_from_balanced": -0.019888307930106985
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.8568507157464212,
+      "endpoint_recall": 0.8752556237218814,
+      "endpoint_std": 0.0197211672003946,
+      "drop_from_balanced": -0.018404907975460127
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.8568507157464212,
+      "endpoint_recall": 0.7995910020449898,
+      "endpoint_std": 0.0070840523826948,
+      "drop_from_balanced": 0.05725971370143146
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.4849537037037037,
+      "endpoint_recall": 0.5347222222222222,
+      "endpoint_std": 0.0091866364967519,
+      "drop_from_balanced": -0.04976851851851849
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.4849537037037037,
+      "endpoint_recall": 0.5462962962962963,
+      "endpoint_std": 0.0303364407918545,
+      "drop_from_balanced": -0.06134259259259256
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.64138181590121,
+      "endpoint_recall": 0.6627222170806492,
+      "endpoint_std": 0.0099614790335443,
+      "drop_from_balanced": -0.02134040117943914
+    },
+    {
+      "experiment": 1,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.64138181590121,
+      "endpoint_recall": 0.5970510299811422,
+      "endpoint_std": 0.0092104452064287,
+      "drop_from_balanced": 0.04433078592006778
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.882768361581921,
+      "endpoint_recall": 0.786723163841808,
+      "endpoint_std": 0.0258902581635922,
+      "drop_from_balanced": 0.096045197740113
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.882768361581921,
+      "endpoint_recall": 0.9194915254237288,
+      "endpoint_std": 0.0073391983371562,
+      "drop_from_balanced": -0.03672316384180785
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5106382978723404,
+      "endpoint_recall": 0.5212765957446809,
+      "endpoint_std": 0.0184260724209455,
+      "drop_from_balanced": -0.010638297872340496
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5106382978723404,
+      "endpoint_recall": 0.4787234042553192,
+      "endpoint_std": 0.0383569284623829,
+      "drop_from_balanced": 0.03191489361702121
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6701546187181929,
+      "endpoint_recall": 0.6646159119595941,
+      "endpoint_std": 0.0077918420269553,
+      "drop_from_balanced": 0.005538706758598799
+    },
+    {
+      "experiment": 2,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6701546187181929,
+      "endpoint_recall": 0.6718303907892232,
+      "endpoint_std": 0.0113661015225729,
+      "drop_from_balanced": -0.0016757720710303126
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.8588957055214723,
+      "endpoint_recall": 0.8916155419222904,
+      "endpoint_std": 0.0093713204395824,
+      "drop_from_balanced": -0.0327198364008181
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.8588957055214723,
+      "endpoint_recall": 0.6850715746421269,
+      "endpoint_std": 0.0093713204395824,
+      "drop_from_balanced": 0.17382413087934545
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5069444444444445,
+      "endpoint_recall": 0.4768518518518518,
+      "endpoint_std": 0.0315061518259633,
+      "drop_from_balanced": 0.030092592592592726
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5069444444444445,
+      "endpoint_recall": 0.5115740740740741,
+      "endpoint_std": 0.044781347504984,
+      "drop_from_balanced": -0.004629629629629539
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.646637331558123,
+      "endpoint_recall": 0.6460710764473764,
+      "endpoint_std": 0.0096782996440516,
+      "drop_from_balanced": 0.0005662551107465941
+    },
+    {
+      "experiment": 2,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.646637331558123,
+      "endpoint_recall": 0.6419758591744428,
+      "endpoint_std": 0.0095887938518542,
+      "drop_from_balanced": 0.0046614723836801986
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.8799435028248587,
+      "endpoint_recall": 0.768361581920904,
+      "endpoint_std": 0.0318031927943437,
+      "drop_from_balanced": 0.11158192090395469
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.8799435028248587,
+      "endpoint_recall": 0.9110169491525424,
+      "endpoint_std": 0.0184699107777146,
+      "drop_from_balanced": -0.031073446327683718
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.4858156028368794,
+      "endpoint_recall": 0.578014184397163,
+      "endpoint_std": 0.0442907659460879,
+      "drop_from_balanced": -0.0921985815602836
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.4858156028368794,
+      "endpoint_recall": 0.1631205673758865,
+      "endpoint_std": 0.0162502684218292,
+      "drop_from_balanced": 0.3226950354609929
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6714419109566933,
+      "endpoint_recall": 0.6623861401676656,
+      "endpoint_std": 0.0036842744771708,
+      "drop_from_balanced": 0.00905577078902764
+    },
+    {
+      "experiment": 3,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6714419109566933,
+      "endpoint_recall": 0.6325069780867204,
+      "endpoint_std": 0.0081076000967592,
+      "drop_from_balanced": 0.03893493286997285
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.8548057259713701,
+      "endpoint_recall": 0.9120654396728016,
+      "endpoint_std": 0.0197211672003946,
+      "drop_from_balanced": -0.05725971370143157
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.8548057259713701,
+      "endpoint_recall": 0.6687116564417178,
+      "endpoint_std": 0.0591635016011837,
+      "drop_from_balanced": 0.18609406952965224
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5081018518518517,
+      "endpoint_recall": 0.2199074074074074,
+      "endpoint_std": 0.0364721093902516,
+      "drop_from_balanced": 0.2881944444444443
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5081018518518517,
+      "endpoint_recall": 0.5914351851851852,
+      "endpoint_std": 0.0121940436954313,
+      "drop_from_balanced": -0.08333333333333348
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6422161432228595,
+      "endpoint_recall": 0.6308907465875397,
+      "endpoint_std": 0.0121847738184172,
+      "drop_from_balanced": 0.011325396635319729
+    },
+    {
+      "experiment": 3,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6422161432228595,
+      "endpoint_recall": 0.635263179449143,
+      "endpoint_std": 0.0057625892938306,
+      "drop_from_balanced": 0.0069529637737164585
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.902542372881356,
+      "endpoint_recall": 0.7641242937853109,
+      "endpoint_std": 0.0160421139711872,
+      "drop_from_balanced": 0.1384180790960451
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.902542372881356,
+      "endpoint_recall": 0.9096045197740112,
+      "endpoint_std": 0.0048927988914374,
+      "drop_from_balanced": -0.007062146892655274
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5283687943262412,
+      "endpoint_recall": 0.152482269503546,
+      "endpoint_std": 0.0162502684218292,
+      "drop_from_balanced": 0.3758865248226952
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5283687943262412,
+      "endpoint_recall": 0.5815602836879433,
+      "endpoint_std": 0.0061420241403151,
+      "drop_from_balanced": -0.05319148936170215
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6857932986695037,
+      "endpoint_recall": 0.6312057008573416,
+      "endpoint_std": 0.0070287905509307,
+      "drop_from_balanced": 0.05458759781216205
+    },
+    {
+      "experiment": 4,
+      "gender": "Female",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6857932986695037,
+      "endpoint_recall": 0.6756014860142042,
+      "endpoint_std": 0.0060747249411314,
+      "drop_from_balanced": 0.010191812655299448
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 0.0,
+      "balanced_recall": 0.8609406952965236,
+      "endpoint_recall": 0.8895705521472393,
+      "endpoint_std": 0.0221199464752392,
+      "drop_from_balanced": -0.02862985685071573
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "happy",
+      "fraction": 1.0,
+      "balanced_recall": 0.8609406952965236,
+      "endpoint_recall": 0.6768916155419222,
+      "endpoint_std": 0.0154393342234575,
+      "drop_from_balanced": 0.18404907975460139
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 0.0,
+      "balanced_recall": 0.5289351851851852,
+      "endpoint_recall": 0.5798611111111112,
+      "endpoint_std": 0.0331228889380884,
+      "drop_from_balanced": -0.05092592592592593
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "angry",
+      "fraction": 1.0,
+      "balanced_recall": 0.5289351851851852,
+      "endpoint_recall": 0.167824074074074,
+      "endpoint_std": 0.0144560138851814,
+      "drop_from_balanced": 0.36111111111111127
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 0.0,
+      "balanced_recall": 0.6512888072074174,
+      "endpoint_recall": 0.6592589434851238,
+      "endpoint_std": 0.0056288550484509,
+      "drop_from_balanced": -0.007970136277706374
+    },
+    {
+      "experiment": 4,
+      "gender": "Male",
+      "label": "mean",
+      "fraction": 1.0,
+      "balanced_recall": 0.6512888072074174,
+      "endpoint_recall": 0.6038878905756112,
+      "endpoint_std": 0.0035307440922995,
+      "drop_from_balanced": 0.047400916631806234
+    }
+  ]
+}
